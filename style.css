@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: rgb(0, 0, 0);
+    /* color: #fff; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+/* calculator box */
+.calculator{
+    background: #1e1e1e;
+    padding: 20px;
+    border: solid black 4px;
+    border-radius: 15px;
+    width: 340px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    animation-name: fadeIn 0.5 ease;  /*  ask */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+#display{
+    background: #000;
+    color: #0f0;
+    text-align: right;
+    font-size: 3rem;  /*  ask */
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    min-height: 100px;
+    width: 350px;
+    overflow-x: auto;  /*  ask */
+    transition: background 0.3s;
+}
+
+.buttons{
+    display: grid;  /*  ask  -   all buttons are ina column*/  
+    grid-template-columns: repeat(4,1fr); 
+    gap: 10px; /* ? */
+}
+
+.btn{
+    padding: 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 50%;
+    background-color: #333;
+    color: white;
+    transition: transform 0.2s , background-color 0.3s;
+    cursor: pointer;  /* ask */
+}
+
+
+.btn:active{
+    transform: scale(0.95);
+
+}
+
+.btn:hover{
+    background-color: #5c5c5c;
+}
+
+.operator{
+    background-color: #ff9500;
+}
+
+.operator:hover{
+    background-color: #e28500;
+}
+
+.control{
+    background-color: #999;
+}
+
+.control:hover{
+    background-color: #bbb;
+}
+
+.func{
+    background-color: #0077cc;
+}
+
+.func:hover{
+    background-color: #005fa3;
+}
+
+.zero{
+    grid-column: span 2;
+    border-radius: 30px;
+}
+
+/* ask about it  */
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
